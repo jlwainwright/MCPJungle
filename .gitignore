@@ -30,3 +30,26 @@ go.work.sum
 
 # Added by goreleaser init:
 dist/
+
+# Database files
+*.db
+
+# Built binaries
+mcpjungle-dev
+
+# Node modules
+web/node_modules/
+
+# Build outputs  
+web/.next/
+web/out/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temp files
+cookies.txt
+
+# Claude memory
+.claude/

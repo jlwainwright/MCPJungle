@@ -69,8 +69,16 @@ func runStartServer(cmd *cobra.Command, args []string) error {
 		return fmt.Errorf("failed to create MCP service: %v", err)
 	}
 
+	// create the client service
+	clientService := service.NewClientService(dbConn)
+	
+	// initialize default clients
+	if err := clientService.InitializeDefaultClients(); err != nil {
+		return fmt.Errorf("failed to initialize default clients: %v", err)
+	}
+
 	// create the API server
-	s, err := api.NewServer(port, mcpProxyServer, mcpService)
+	s, err := api.NewServer(port, mcpProxyServer, mcpService, clientService)
 	if err != nil {
 		return fmt.Errorf("failed to create server: %v", err)
 	}
