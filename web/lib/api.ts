@@ -2,6 +2,34 @@ const API_BASE_URL = process.env.NODE_ENV === 'development'
   ? 'http://localhost:8080/api/v0'
   : '/api/v0'
 
+// Console logging for API calls
+const logApiCall = (method: string, url: string, data?: any) => {
+  console.group(`🌳 MCPJungle API: ${method.toUpperCase()} ${url}`)
+  console.log('🕐 Timestamp:', new Date().toISOString())
+  if (data) {
+    console.log('📤 Request Data:', data)
+  }
+  console.groupEnd()
+}
+
+const logApiResponse = (method: string, url: string, response: Response, data?: any) => {
+  console.group(`🌳 MCPJungle API Response: ${method.toUpperCase()} ${url}`)
+  console.log('🕐 Timestamp:', new Date().toISOString())
+  console.log('📊 Status:', response.status, response.statusText)
+  console.log('📍 URL:', response.url)
+  if (data) {
+    console.log('📥 Response Data:', data)
+  }
+  console.groupEnd()
+}
+
+const logApiError = (method: string, url: string, error: any) => {
+  console.group(`🚨 MCPJungle API Error: ${method.toUpperCase()} ${url}`)
+  console.log('🕐 Timestamp:', new Date().toISOString())
+  console.error('❌ Error:', error)
+  console.groupEnd()
+}
+
 export interface MCPServer {
   id: string
   name: string
@@ -27,33 +55,78 @@ export interface ClientServerMatrix {
 
 export const api = {
   async getServers(): Promise<MCPServer[]> {
-    const response = await fetch(`${API_BASE_URL}/servers`)
-    if (!response.ok) throw new Error('Failed to fetch servers')
-    return response.json()
+    const url = `${API_BASE_URL}/servers`
+    logApiCall('GET', url)
+    try {
+      const response = await fetch(url)
+      const data = await response.json()
+      logApiResponse('GET', url, response, data)
+      if (!response.ok) throw new Error('Failed to fetch servers')
+      return data
+    } catch (error) {
+      logApiError('GET', url, error)
+      throw error
+    }
   },
 
   async getClients(): Promise<ClientConfig[]> {
-    const response = await fetch(`${API_BASE_URL}/clients`)
-    if (!response.ok) throw new Error('Failed to fetch clients')
-    return response.json()
+    const url = `${API_BASE_URL}/clients`
+    logApiCall('GET', url)
+    try {
+      const response = await fetch(url)
+      const data = await response.json()
+      logApiResponse('GET', url, response, data)
+      if (!response.ok) throw new Error('Failed to fetch clients')
+      return data
+    } catch (error) {
+      logApiError('GET', url, error)
+      throw error
+    }
   },
 
   async getClientServerMatrix(): Promise<ClientServerMatrix> {
-    const response = await fetch(`${API_BASE_URL}/client-server-matrix`)
-    if (!response.ok) throw new Error('Failed to fetch client server matrix')
-    return response.json()
+    const url = `${API_BASE_URL}/client-server-matrix`
+    logApiCall('GET', url)
+    try {
+      const response = await fetch(url)
+      const data = await response.json()
+      logApiResponse('GET', url, response, data)
+      if (!response.ok) throw new Error('Failed to fetch client server matrix')
+      return data
+    } catch (error) {
+      logApiError('GET', url, error)
+      throw error
+    }
   },
 
   async toggleServerForClient(clientType: string, serverId: string): Promise<void> {
-    const response = await fetch(`${API_BASE_URL}/clients/${clientType}/servers/${serverId}/toggle`, {
-      method: 'POST'
-    })
-    if (!response.ok) throw new Error('Failed to toggle server for client')
+    const url = `${API_BASE_URL}/clients/${clientType}/servers/${serverId}/toggle`
+    logApiCall('POST', url, { clientType, serverId })
+    try {
+      const response = await fetch(url, {
+        method: 'POST'
+      })
+      const data = response.status !== 204 ? await response.json() : null
+      logApiResponse('POST', url, response, data)
+      if (!response.ok) throw new Error('Failed to toggle server for client')
+    } catch (error) {
+      logApiError('POST', url, error)
+      throw error
+    }
   },
 
   async generateClientConfig(clientType: string): Promise<object> {
-    const response = await fetch(`${API_BASE_URL}/clients/${clientType}/config`)
-    if (!response.ok) throw new Error('Failed to generate client config')
-    return response.json()
+    const url = `${API_BASE_URL}/clients/${clientType}/config`
+    logApiCall('GET', url)
+    try {
+      const response = await fetch(url)
+      const data = await response.json()
+      logApiResponse('GET', url, response, data)
+      if (!response.ok) throw new Error('Failed to generate client config')
+      return data
+    } catch (error) {
+      logApiError('GET', url, error)
+      throw error
+    }
   }
 }

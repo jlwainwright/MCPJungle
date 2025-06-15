@@ -106,6 +106,9 @@ func (s *ClientService) GetClientServerMatrix() (ClientServerMatrix, error) {
 		model.ClientTypeCursor,
 		model.ClientTypeWindsurf,
 		model.ClientTypeCline,
+		model.ClientTypeClaudeCode,
+		model.ClientTypeRooCode,
+		model.ClientTypeKiloCode,
 	}
 
 	for _, clientType := range clientTypes {
@@ -150,6 +153,27 @@ func (s *ClientService) InitializeDefaultClients() error {
 			DisplayName: "Cline",
 			ConfigPath:  "~/.cline/mcp_config.json",
 			Icon:        "📋",
+			Enabled:     true,
+		},
+		{
+			ClientType:  model.ClientTypeClaudeCode,
+			DisplayName: "Claude Code CLI",
+			ConfigPath:  "~/.config/claude-code/mcp_config.json",
+			Icon:        "💻",
+			Enabled:     true,
+		},
+		{
+			ClientType:  model.ClientTypeRooCode,
+			DisplayName: "Roo.Code",
+			ConfigPath:  "~/.roocode/mcp_config.json",
+			Icon:        "🦘",
+			Enabled:     true,
+		},
+		{
+			ClientType:  model.ClientTypeKiloCode,
+			DisplayName: "Kilo.Code",
+			ConfigPath:  "~/.kilocode/mcp_config.json",
+			Icon:        "⚡",
 			Enabled:     true,
 		},
 	}

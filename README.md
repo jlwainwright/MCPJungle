@@ -190,3 +190,55 @@ goreleaser release --clean
 ```
 
 This will create a new release under Releases and also make it available via Homebrew.
+
+## Modern Web Dashboard
+
+MCPJungle now includes a modern web dashboard for managing MCP servers across different AI clients.
+
+### Features
+- **Visual Server Matrix**: Toggle servers on/off for different AI clients
+- **Real-time Configuration**: Generate client-specific config files instantly  
+- **Multi-Client Support**: Claude Desktop, Cursor, Windsurf, Cline, Claude Code CLI, Roo.Code, Kilo.Code
+- **Modern UI**: Responsive design with Tailwind CSS
+- **API Logging**: Detailed console logging for debugging
+
+### Quick Start
+```bash
+# Start the full stack (API + Web Dashboard)
+docker-compose up --build
+
+# Access the dashboard
+open http://localhost:3001
+```
+
+## TODO: Future Enhancements
+
+### Immediate Improvements
+- [x] **Console Logging**: Add detailed API call logging to show server communication
+- [ ] **Error Handling**: Improve error states and user feedback for failed API calls
+- [ ] **Loading States**: Add skeleton loaders and better loading indicators
+
+### Client Support Expansion  
+- [ ] **Claude Code CLI**: Add support for Claude Code CLI configuration
+- [ ] **Roo.Code**: Integrate Roo.Code AI assistant configuration
+- [ ] **Kilo.Code**: Support for Kilo.Code development environment
+
+### Advanced Features
+- [ ] **Server Health Monitoring**: Real-time server status checking and alerts
+- [ ] **Usage Analytics**: Track tool usage patterns across clients
+- [ ] **Bulk Operations**: Multi-select server management
+- [ ] **Configuration Templates**: Pre-defined client setups for common workflows
+- [ ] **Import/Export**: Backup and restore client configurations
+- [ ] **Dark Mode**: Theme switching support
+- [ ] **Multi-user Support**: User authentication and role-based access
+
+### Performance & UX
+- [ ] **Real-time Updates**: WebSocket integration for live status updates
+- [ ] **Keyboard Shortcuts**: Quick actions and navigation
+- [ ] **Search & Filtering**: Advanced server and tool discovery
+- [ ] **Drag & Drop**: Intuitive server assignment to clients
+
+---
+
+**Created by**: Jacques Wainwright  
+**Support**: https://buymeacoffee.com/jlwainwright

@@ -8,10 +8,13 @@ import (
 type ClientType string
 
 const (
-	ClientTypeClaude   ClientType = "claude"
-	ClientTypeCursor   ClientType = "cursor"
-	ClientTypeWindsurf ClientType = "windsurf"
-	ClientTypeCline    ClientType = "cline"
+	ClientTypeClaude     ClientType = "claude"
+	ClientTypeCursor     ClientType = "cursor"
+	ClientTypeWindsurf   ClientType = "windsurf"
+	ClientTypeCline      ClientType = "cline"
+	ClientTypeClaudeCode ClientType = "claude-code"
+	ClientTypeRooCode    ClientType = "roo-code"
+	ClientTypeKiloCode   ClientType = "kilo-code"
 )
 
 type ClientConfig struct {

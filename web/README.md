@@ -50,3 +50,30 @@ The web interface connects to the MCPJungle backend API at:
 - **UI Components**: Headless UI and Heroicons
 - **State Management**: React hooks (useState, useEffect)
 - **API Client**: Native fetch with TypeScript interfaces
+
+## TODO: Future Enhancements
+
+### Immediate Improvements
+- [ ] **Console Logging**: Add detailed API call logging to show server communication in browser console
+- [ ] **Error Handling**: Improve error states and user feedback for failed API calls
+- [ ] **Loading States**: Add skeleton loaders and better loading indicators
+
+### Client Support Expansion
+- [ ] **Claude Code CLI**: Add support for Claude Code CLI configuration
+- [ ] **Roo.Code**: Integrate Roo.Code AI assistant configuration
+- [ ] **Kilo.Code**: Support for Kilo.Code development environment
+
+### Advanced Features
+- [ ] **Server Health Monitoring**: Real-time server status checking and alerts
+- [ ] **Usage Analytics**: Track tool usage patterns across clients
+- [ ] **Bulk Operations**: Multi-select server management
+- [ ] **Configuration Templates**: Pre-defined client setups for common workflows
+- [ ] **Import/Export**: Backup and restore client configurations
+- [ ] **Dark Mode**: Theme switching support
+- [ ] **Multi-user Support**: User authentication and role-based access
+
+### Performance & UX
+- [ ] **Real-time Updates**: WebSocket integration for live status updates
+- [ ] **Keyboard Shortcuts**: Quick actions and navigation
+- [ ] **Search & Filtering**: Advanced server and tool discovery
+- [ ] **Drag & Drop**: Intuitive server assignment to clients
