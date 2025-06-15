@@ -218,6 +218,8 @@ open http://localhost:3001
 - [x] **Tool-level Configuration**: Expandable server rows with individual tool toggles
 - [ ] **Server Discovery**: Pull maintained servers from https://github.com/modelcontextprotocol/servers
 - [ ] **Real-time Health Monitoring**: Functional heartbeat indicators for server status
+- [ ] **Anthropic SDK Integration**: Connect to Anthropic API for enhanced functionality
+- [ ] **Usage Analytics Database**: Collect metrics on token usage, model calls, and tool usage
 - [ ] **Error Handling**: Improve error states and user feedback for failed API calls
 - [ ] **Loading States**: Add skeleton loaders and better loading indicators
 
@@ -240,6 +242,15 @@ open http://localhost:3001
 - [ ] **Performance Metrics**: Response times, success rates, error tracking
 - [ ] **Alerting System**: Notifications for server failures or issues
 - [ ] **Historical Monitoring**: Server uptime and performance trends
+
+### Analytics & Metrics
+- [ ] **Token Usage Tracking**: Monitor token consumption per model and tool
+- [ ] **Model Performance Analytics**: Track which models call which tools most
+- [ ] **Cost Analysis**: Calculate and display API costs by client and tool
+- [ ] **Usage Dashboards**: Visual analytics for tool and model usage patterns
+- [ ] **Billing Integration**: Connect with Anthropic billing for cost tracking
+- [ ] **Export Reports**: Generate usage and cost reports for accounting
+- [ ] **Alert System**: Notifications for cost thresholds and usage spikes
 
 ### Advanced Features
 - [ ] **Usage Analytics**: Track tool usage patterns across clients
