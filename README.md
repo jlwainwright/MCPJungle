@@ -215,6 +215,9 @@ open http://localhost:3001
 
 ### Immediate Improvements
 - [x] **Console Logging**: Add detailed API call logging to show server communication
+- [x] **Tool-level Configuration**: Expandable server rows with individual tool toggles
+- [ ] **Server Discovery**: Pull maintained servers from https://github.com/modelcontextprotocol/servers
+- [ ] **Real-time Health Monitoring**: Functional heartbeat indicators for server status
 - [ ] **Error Handling**: Improve error states and user feedback for failed API calls
 - [ ] **Loading States**: Add skeleton loaders and better loading indicators
 
@@ -223,8 +226,22 @@ open http://localhost:3001
 - [ ] **Roo.Code**: Integrate Roo.Code AI assistant configuration
 - [ ] **Kilo.Code**: Support for Kilo.Code development environment
 
+### Server Discovery & Management
+- [ ] **MCP Server Registry**: Pull from https://github.com/modelcontextprotocol/servers
+- [ ] **Server Search**: Search and filter available MCP servers by category/functionality
+- [ ] **One-click Installation**: Install servers directly from the registry
+- [ ] **Server Marketplace**: Browse curated server collections
+- [ ] **Version Management**: Handle server updates and versioning
+- [ ] **Dependency Resolution**: Auto-install server dependencies
+
+### Health & Monitoring
+- [ ] **Real-time Heartbeat**: Functional green/red dots showing live server status
+- [ ] **Health Dashboard**: Comprehensive server health monitoring
+- [ ] **Performance Metrics**: Response times, success rates, error tracking
+- [ ] **Alerting System**: Notifications for server failures or issues
+- [ ] **Historical Monitoring**: Server uptime and performance trends
+
 ### Advanced Features
-- [ ] **Server Health Monitoring**: Real-time server status checking and alerts
 - [ ] **Usage Analytics**: Track tool usage patterns across clients
 - [ ] **Bulk Operations**: Multi-select server management
 - [ ] **Configuration Templates**: Pre-defined client setups for common workflows
