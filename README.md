@@ -190,3 +190,97 @@ goreleaser release --clean
 ```
 
 This will create a new release under Releases and also make it available via Homebrew.
+
+## Modern Web Dashboard
+
+MCPJungle now includes a modern web dashboard for managing MCP servers across different AI clients.
+
+### Features
+- **Visual Server Matrix**: Toggle servers on/off for different AI clients
+- **Real-time Configuration**: Generate client-specific config files instantly  
+- **Multi-Client Support**: Claude Desktop, Cursor, Windsurf, Cline, Claude Code CLI, Roo.Code, Kilo.Code
+- **Modern UI**: Responsive design with Tailwind CSS
+- **API Logging**: Detailed console logging for debugging
+
+### Quick Start
+```bash
+# Start the full stack (API + Web Dashboard)
+docker-compose up --build
+
+# Access the dashboard
+open http://localhost:3001
+```
+
+## Current Status & Roadmap
+
+### ✅ Completed Features (v1.0)
+- [x] **Modern Web Dashboard**: Responsive UI with server toggle matrix and real-time control
+- [x] **Multi-Client Management**: Support for Claude Desktop, Cursor, Windsurf, Cline, Claude Code CLI, Roo.Code, Kilo.Code
+- [x] **Granular Tool Control**: Expandable server rows with individual tool-level toggles per client
+- [x] **Console Logging**: Detailed API call tracking with visual indicators for debugging
+- [x] **Analytics Foundation**: Complete database schema for usage metrics, cost tracking, and performance monitoring
+- [x] **Docker Integration**: Full-stack deployment with PostgreSQL, Go backend, and Next.js frontend
+- [x] **Future-Ready Architecture**: Foundations for server discovery, health monitoring, and Anthropic SDK integration
+
+### 🎯 Next Phase: Commercial Product Evolution
+
+**Strategic Direction**: Transition from open-source tool to commercial SaaS platform (potential names: ToolFlow, AgentHub, ControlPlane AI)
+
+### High Priority (Q1 2025)
+- [ ] **Docker MCP Integration**: Leverage Docker's MCP Catalog and Toolkit (100+ verified servers)
+- [ ] **Enhanced Server Discovery**: GitHub registry + Docker Hub catalog integration
+- [ ] **Real-time Health Monitoring**: Functional heartbeat indicators with container status
+- [ ] **Anthropic SDK Integration**: Live token usage tracking and cost calculations
+- [ ] **Product Rebrand & Positioning**: Commercial product launch preparation
+- [ ] **SaaS Infrastructure**: Multi-tenancy, authentication, billing system
+
+### Client Support Expansion  
+- [ ] **Claude Code CLI**: Add support for Claude Code CLI configuration
+- [ ] **Roo.Code**: Integrate Roo.Code AI assistant configuration
+- [ ] **Kilo.Code**: Support for Kilo.Code development environment
+
+### Server Discovery & Management
+- [ ] **MCP Server Registry**: Pull from https://github.com/modelcontextprotocol/servers
+- [ ] **Server Search**: Search and filter available MCP servers by category/functionality
+- [ ] **One-click Installation**: Install servers directly from the registry
+- [ ] **Server Marketplace**: Browse curated server collections
+- [ ] **Version Management**: Handle server updates and versioning
+- [ ] **Dependency Resolution**: Auto-install server dependencies
+
+### Health & Monitoring
+- [ ] **Real-time Heartbeat**: Functional green/red dots showing live server status
+- [ ] **Health Dashboard**: Comprehensive server health monitoring
+- [ ] **Performance Metrics**: Response times, success rates, error tracking
+- [ ] **Alerting System**: Notifications for server failures or issues
+- [ ] **Historical Monitoring**: Server uptime and performance trends
+
+### Revenue-Generating Features (Q2-Q3 2025)
+- [ ] **Usage Analytics Dashboard**: Visual insights for cost optimization and ROI analysis
+- [ ] **Enterprise Authentication**: SSO, RBAC, audit logs, compliance (SOC2, GDPR)
+- [ ] **Advanced Alerting**: Cost thresholds, usage spikes, performance degradation
+- [ ] **Business Intelligence**: Token consumption analysis, optimization recommendations
+- [ ] **White-label Solutions**: Custom branding for enterprise customers
+- [ ] **API Management**: Rate limiting, usage quotas, webhook integrations
+- [ ] **Marketplace Ecosystem**: Plugin system for custom integrations
+
+### Market Opportunity
+**Target Market**: AI-forward development teams, consultants, and enterprises managing multiple AI clients
+**Revenue Model**: Freemium SaaS ($19 Pro, $49 Team, $199 Enterprise per month)
+**Competitive Advantage**: Only solution providing granular, client-specific MCP tool management with cost analytics
+**Market Size**: $2B+ AI developer tools market growing 40% annually
+
+### Integration Partnerships
+- [ ] **Docker MCP Ecosystem**: Official integration with Docker's MCP Catalog
+- [ ] **AI Client Partnerships**: Direct integrations with Anthropic, Cursor, Windsurf teams
+- [ ] **Enterprise Platforms**: Slack, Microsoft Teams, Datadog, New Relic integrations
+
+### Performance & UX
+- [ ] **Real-time Updates**: WebSocket integration for live status updates
+- [ ] **Keyboard Shortcuts**: Quick actions and navigation
+- [ ] **Search & Filtering**: Advanced server and tool discovery
+- [ ] **Drag & Drop**: Intuitive server assignment to clients
+
+---
+
+**Created by**: Jacques Wainwright  
+**Support**: https://buymeacoffee.com/jlwainwright
